@@ -1,0 +1,12 @@
+{
+  "name": "claude-skills",
+  "plugins": [
+    {
+      "name": "claude-skills",
+      "description": "Skills para Claude Code: YouTube channel research y mas.",
+      "source": "./",
+      "strict": false,
+      "skills": ["./skills/youtube"]
+    }
+  ]
+}

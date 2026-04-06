@@ -1,8 +1,8 @@
 # Claude Skills
 
-Skills para Claude Code. Cada skill es un agente especializado invocable como slash command.
+Skills para [Claude Code](https://docs.anthropic.com/en/docs/claude-code). Cada skill es un agente especializado invocable como slash command.
 
-## Skills disponibles
+## Skills
 
 ### `/youtube` — YouTube Channel Research
 
@@ -27,10 +27,11 @@ Analiza canales de YouTube: obtiene los 30 videos recientes, calcula métricas d
 
 ## Instalación
 
-### Como plugin de Claude Code
+### Como plugin
 
 ```bash
-claude plugin install seoutopico/claude_skills
+/plugin marketplace add seoutopico/claude_skills
+/plugin install claude-skills@claude-skills
 ```
 
 ### Con npx skills
@@ -41,19 +42,19 @@ npx skills add seoutopico/claude_skills
 
 ### Manual
 
-Copia el skill a tu directorio de skills:
-
 ```bash
-# Global (todos los proyectos)
+# Global (todos tus proyectos)
 cp -r skills/youtube ~/.claude/skills/youtube
 
 # Solo un proyecto
 cp -r skills/youtube tu-proyecto/.claude/skills/youtube
 ```
 
+---
+
 ## Setup
 
-Configura tu YouTube API key:
+Configura tu YouTube API key como variable de entorno:
 
 ```bash
 # Linux/macOS
@@ -62,6 +63,8 @@ export YOUTUBE_API_KEY="tu-api-key"
 # Windows
 setx YOUTUBE_API_KEY "tu-api-key"
 ```
+
+Obtén una key gratis en [Google Cloud Console](https://console.cloud.google.com/apis/credentials) activando la YouTube Data API v3.
 
 ## Licencia
 

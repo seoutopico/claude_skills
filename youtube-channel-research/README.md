@@ -1,60 +1,82 @@
 # YouTube Channel Research Skill
 
-A YouTube channel analyzer skill for Claude Code. Fetches the latest 30 videos, calculates engagement metrics, and generates a content strategy analysis — all from 3 API calls.
+Skill para Claude Code que analiza canales de YouTube. Obtiene los 30 videos mas recientes, calcula metricas de engagement y genera un analisis de estrategia de contenido — todo en 3 llamadas a la API.
 
-## Capabilities
+## Capacidades
 
-- **Channel Stats**: Subscribers, total videos, description
-- **Top Videos Table**: 30 most recent videos sorted by views with likes, comments, and dates
-- **Engagement Metrics**: Average views, likes, engagement ratio (likes/views)
-- **Content Analysis**: What works, what doesn't, and actionable recommendations
-- **Obsidian-ready**: Output includes YAML frontmatter compatible with Obsidian vaults
+- **Datos del canal**: Suscriptores, total de videos, descripcion
+- **Tabla de videos**: Los 30 mas recientes ordenados por views con likes, comentarios y fechas
+- **Metricas de engagement**: Promedio de views, likes, ratio de engagement (likes/views)
+- **Analisis de contenido**: Que funciona, que no, y recomendaciones accionables
+- **Compatible con Obsidian**: El output incluye frontmatter YAML
 
-## Screenshots
+## Capturas
 
-### Skill execution (progress checklist + API calls)
+### Ejecucion del skill (progress checklist + llamadas API)
 
-![Skill execution](../examples/youtube-channel-research/skill-execution.png)
+![Ejecucion del skill](../examples/youtube-channel-research/skill-execution.png)
 
-### Output generation
+### Generacion del output
 
-![Skill output](../examples/youtube-channel-research/skill-output.png)
+![Output del skill](../examples/youtube-channel-research/skill-output.png)
 
-## Installation
+## Instalacion
 
 ```bash
 claude plugins add /path/to/claude_skills/youtube-channel-research
 ```
 
-## Setup
+## Configuracion
 
-Requires a free YouTube Data API v3 key:
+Necesitas una API key de YouTube Data API v3 (gratis).
+
+**Opcion 1 — Variable de entorno:**
 
 ```bash
 # Linux/macOS
-export YOUTUBE_API_KEY="your-api-key"
+export YOUTUBE_API_KEY="tu-api-key"
 
 # Windows
-setx YOUTUBE_API_KEY "your-api-key"
+setx YOUTUBE_API_KEY "tu-api-key"
 ```
 
-Get a key at [Google Cloud Console](https://console.cloud.google.com/apis/credentials) enabling the YouTube Data API v3.
+**Opcion 2 — En `.claude/settings.local.json`:**
 
-## Usage
+```json
+{
+  "env": {
+    "YOUTUBE_API_KEY": "tu-api-key"
+  }
+}
+```
+
+Consigue una key gratis en [Google Cloud Console](https://console.cloud.google.com/apis/credentials) activando la YouTube Data API v3.
+
+## Uso
 
 ```
 /youtube-channel-research @midudev
 /youtube-channel-research @ThePrimeagen -o primeagen.md
-/youtube-channel-research @AlexHormozi -d my-vault/research/
+/youtube-channel-research @AlexHormozi -d mi-vault/research/
 ```
 
-## Example Output
+## Ejemplos de output
 
-See full examples in the [examples/youtube-channel-research](../examples/youtube-channel-research/) folder:
+Mira ejemplos reales en la carpeta [examples/youtube-channel-research](../examples/youtube-channel-research/):
 
 - [youtube-research-sabrina-ramonov.md](../examples/youtube-channel-research/youtube-research-sabrina-ramonov.md)
 - [youtube-research-alexhormozi.md](../examples/youtube-channel-research/youtube-research-alexhormozi.md)
 
-## Source
+## Fuente
 
-Uses the [YouTube Data API v3](https://developers.google.com/youtube/v3) via curl. Only 3 API calls per execution (channels, playlistItems, videos).
+Usa la [YouTube Data API v3](https://developers.google.com/youtube/v3) via curl. Solo 3 llamadas por ejecucion (channels, playlistItems, videos).
+
+---
+
+## Autora
+
+**Aina-Lluna Taylor** — Desarrollo herramientas de IA para resolver problemas reales.
+
+- [Newsletter ainalluna](https://ainalluna.substack.com/) — IA aplicada, herramientas y automatizacion. Suscribete.
+- [Web](https://ainalluna.com/)
+- [LinkedIn](https://www.linkedin.com/in/ainataylor/)

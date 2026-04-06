@@ -1,0 +1,10 @@
+{
+  "name": "youtube-channel-research",
+  "description": "Analiza canales de YouTube: videos recientes, metricas de engagement y analisis de contenido.",
+  "version": "1.0.0",
+  "author": {
+    "name": "seoutopico"
+  },
+  "homepage": "https://github.com/seoutopico/claude_skills",
+  "license": "MIT"
+}

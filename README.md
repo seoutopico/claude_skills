@@ -1,6 +1,6 @@
 # Claude Skills
 
-Skills para [Claude Code](https://docs.anthropic.com/en/docs/claude-code). Cada skill es un agente especializado invocable como slash command.
+Skills para [Claude Code](https://docs.anthropic.com/en/docs/claude-code).
 
 ## Skills
 
@@ -27,33 +27,23 @@ Analiza canales de YouTube: obtiene los 30 videos recientes, calcula métricas d
 
 ## Instalación
 
-Instala cualquier skill como plugin de Claude Code:
-
-```bash
-claude plugin install /path/to/claude_skills/youtube-channel-research
-```
-
-### Como marketplace
+### Como marketplace (recomendado)
 
 ```bash
 /plugin marketplace add seoutopico/claude_skills
-/plugin install claude-skills@claude-skills
+/plugin install youtube-channel-research@claude-skills
 ```
 
-### Con npx skills
+### Directo con --plugin-dir
 
 ```bash
-npx skills add seoutopico/claude_skills
+claude --plugin-dir /path/to/claude_skills/youtube-channel-research
 ```
 
-### Manual
+### Manual (como skill sin plugin)
 
 ```bash
-# Global (todos tus proyectos)
-cp -r skills/youtube-channel-research ~/.claude/skills/youtube-channel-research
-
-# Solo un proyecto
-cp -r skills/youtube-channel-research tu-proyecto/.claude/skills/youtube-channel-research
+cp -r youtube-channel-research/skills/youtube-channel-research ~/.claude/skills/
 ```
 
 ---

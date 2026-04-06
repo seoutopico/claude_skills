@@ -4,12 +4,14 @@
   "owner": {
     "name": "seoutopico"
   },
+  "metadata": {
+    "description": "Skills para Claude Code por seoutopico"
+  },
   "plugins": [
     {
-      "name": "claude-skills",
-      "description": "Skills para Claude Code: YouTube channel research y mas.",
-      "source": "./",
-      "strict": false
+      "name": "youtube-channel-research",
+      "source": "./youtube-channel-research",
+      "description": "Analiza canales de YouTube: videos recientes, metricas de engagement y analisis de contenido."
     }
   ]
 }

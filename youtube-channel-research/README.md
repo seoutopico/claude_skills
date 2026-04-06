@@ -29,20 +29,24 @@ git clone https://github.com/seoutopico/claude_skills
 claude plugins add ./claude_skills/youtube-channel-research
 ```
 
-### Opcion 2 — Manual (sin git)
+### Opcion 2 — Descarga manual
 
-1. Descarga el [ZIP del repo](https://github.com/seoutopico/claude_skills/archive/refs/heads/master.zip) y descomprime
-2. Copia la carpeta del skill a tu directorio de Claude Code:
+1. Descarga el [ZIP del repo](https://github.com/seoutopico/claude_skills/archive/refs/heads/master.zip)
+2. Descomprime el ZIP
+3. Dentro encontraras una carpeta `youtube-channel-research/skills/youtube-channel-research/` — esa carpeta que contiene el archivo `SKILL.md` es la que necesitas
+4. Copia esa carpeta dentro de tu proyecto en `.claude/skills/` (creala si no existe)
 
-```bash
-# Todos tus proyectos (global)
-cp -r youtube-channel-research/skills/youtube-channel-research ~/.claude/skills/
+Tu proyecto deberia quedar asi:
 
-# Solo un proyecto
-cp -r youtube-channel-research/skills/youtube-channel-research tu-proyecto/.claude/skills/
+```
+tu-proyecto/
+├── .claude/
+│   └── skills/
+│       └── youtube-channel-research/
+│           └── SKILL.md
 ```
 
-3. Reinicia Claude Code
+5. Cierra y abre Claude Code de nuevo
 
 ## Configuracion
 

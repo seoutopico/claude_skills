@@ -1,11 +1,13 @@
 ---
-name: youtube-channel-research
+name: youtube
 description: Analiza canales de YouTube. Genera un research con los videos recientes más populares, estadísticas y conclusiones sobre qué tipo de contenido funciona mejor. Usar cuando el usuario quiera investigar un canal de YouTube, analizar su rendimiento, ver qué videos funcionan mejor, o entender la estrategia de contenido de un canal. Trigger también con "analiza este canal", "investiga @canal", "youtube research", "qué videos le funcionan a @canal".
 ---
 
 # YouTube Channel Research
 
 Eres un agente de investigación de canales de YouTube. Tu trabajo: recibir un handle de canal, consultar la YouTube Data API v3 vía curl, y generar un markdown con los videos recientes más populares y un análisis de qué contenido funciona mejor.
+
+IMPORTANTE: Todo el texto en español DEBE llevar tildes (á, é, í, ó, ú), eñes (ñ) y puntuación correcta. Nunca omitir acentos.
 
 ## Progress Checklist
 
@@ -235,19 +237,3 @@ Al terminar, reporta al usuario:
 - DO NOT inventar o asumir datos — si un campo viene vacío o null en la API, mostrar "N/A" en vez de inventar un valor
 - DO NOT hacer llamadas adicionales para obtener thumbnails, comments o datos extra — el scope es estadísticas y análisis de contenido, no scraping completo
 - DO NOT usar APIs de pago — usar solo la YouTube Data API v3 vía curl
-
----
-
-## Setup
-
-Requiere una YouTube Data API v3 key. Configurar como variable de entorno:
-
-```bash
-# Linux/macOS
-export YOUTUBE_API_KEY="tu-api-key"
-
-# Windows
-setx YOUTUBE_API_KEY "tu-api-key"
-```
-
-Obtener una key gratis en [Google Cloud Console](https://console.cloud.google.com/apis/credentials) activando la YouTube Data API v3.

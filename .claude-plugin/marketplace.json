@@ -9,9 +9,11 @@
   },
   "plugins": [
     {
-      "name": "youtube-channel-research",
-      "source": "./youtube-channel-research",
-      "description": "Analiza canales de YouTube: videos recientes, metricas de engagement y analisis de contenido."
+      "name": "claude-skills",
+      "description": "Coleccion de skills para Claude Code: YouTube channel research y mas.",
+      "source": "./",
+      "strict": false,
+      "skills": ["./skills/youtube-channel-research"]
     }
   ]
 }

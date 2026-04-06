@@ -27,30 +27,22 @@ Analiza canales de YouTube: obtiene los 30 videos recientes, calcula métricas d
 
 ## Instalación
 
-### Como marketplace (recomendado)
+### Como plugin (marketplace)
 
 ```bash
 /plugin marketplace add seoutopico/claude_skills
-/plugin install youtube-channel-research@claude-skills
+/plugin install claude-skills@claude-skills
 ```
 
-### Directo con --plugin-dir
+### Manual
 
 ```bash
-claude --plugin-dir /path/to/claude_skills/youtube-channel-research
-```
-
-### Manual (como skill sin plugin)
-
-```bash
-cp -r youtube-channel-research/skills/youtube-channel-research ~/.claude/skills/
+cp -r skills/youtube-channel-research ~/.claude/skills/
 ```
 
 ---
 
 ## Setup
-
-Configura tu YouTube API key como variable de entorno:
 
 ```bash
 # Linux/macOS

@@ -4,14 +4,14 @@ Skills para [Claude Code](https://docs.anthropic.com/en/docs/claude-code). Cada 
 
 ## Skills
 
-### `/youtube` — YouTube Channel Research
+### `youtube-channel-research`
 
 Analiza canales de YouTube: obtiene los 30 videos recientes, calcula métricas de engagement y genera un análisis de qué contenido funciona mejor.
 
 ```
-/youtube @midudev
-/youtube @ThePrimeagen -o primeagen.md
-/youtube @AlexHormozi -d mi-vault/research/
+/youtube-channel-research @midudev
+/youtube-channel-research @ThePrimeagen -o primeagen.md
+/youtube-channel-research @AlexHormozi -d mi-vault/research/
 ```
 
 **Qué genera:**
@@ -27,7 +27,13 @@ Analiza canales de YouTube: obtiene los 30 videos recientes, calcula métricas d
 
 ## Instalación
 
-### Como plugin
+Instala cualquier skill como plugin de Claude Code:
+
+```bash
+claude plugin install /path/to/claude_skills/youtube-channel-research
+```
+
+### Como marketplace
 
 ```bash
 /plugin marketplace add seoutopico/claude_skills
@@ -44,10 +50,10 @@ npx skills add seoutopico/claude_skills
 
 ```bash
 # Global (todos tus proyectos)
-cp -r skills/youtube ~/.claude/skills/youtube
+cp -r skills/youtube-channel-research ~/.claude/skills/youtube-channel-research
 
 # Solo un proyecto
-cp -r skills/youtube tu-proyecto/.claude/skills/youtube
+cp -r skills/youtube-channel-research tu-proyecto/.claude/skills/youtube-channel-research
 ```
 
 ---

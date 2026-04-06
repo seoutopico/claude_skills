@@ -6,7 +6,7 @@
       "description": "Skills para Claude Code: YouTube channel research y mas.",
       "source": "./",
       "strict": false,
-      "skills": ["./skills/youtube"]
+      "skills": ["./skills/youtube-channel-research"]
     }
   ]
 }

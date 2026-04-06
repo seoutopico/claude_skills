@@ -1,59 +1,41 @@
 # Claude Skills
 
-Skills para [Claude Code](https://docs.anthropic.com/en/docs/claude-code).
+A collection of custom Claude Code skills/plugins.
 
 ## Skills
 
-### `youtube-channel-research`
+| Skill | Description |
+|-------|-------------|
+| [youtube-channel-research](./youtube-channel-research/) | YouTube channel analyzer: top videos, engagement metrics, and content strategy insights |
 
-Analiza canales de YouTube: obtiene los 30 videos recientes, calcula métricas de engagement y genera un análisis de qué contenido funciona mejor.
+## Installation
 
-```
-/youtube-channel-research @midudev
-/youtube-channel-research @ThePrimeagen -o primeagen.md
-/youtube-channel-research @AlexHormozi -d mi-vault/research/
-```
-
-**Qué genera:**
-- Tabla con los 30 videos recientes ordenados por views
-- Métricas: promedio de views, likes, engagement ratio
-- Análisis de qué tipo de contenido funciona y qué no
-- Recomendaciones accionables
-- Output compatible con Obsidian (frontmatter YAML)
-
-**Requiere:** YouTube Data API v3 key (gratis) — [obtener aquí](https://console.cloud.google.com/apis/credentials)
-
----
-
-## Instalación
-
-### Como plugin (marketplace)
+Install any skill as a Claude Code plugin:
 
 ```bash
-/plugin marketplace add seoutopico/claude_skills
-/plugin install claude-skills@claude-skills
+claude plugins add /path/to/claude_skills/<skill-name>
 ```
 
-### Manual
+For example:
 
 ```bash
-cp -r skills/youtube-channel-research ~/.claude/skills/
+claude plugins add /path/to/claude_skills/youtube-channel-research
 ```
-
----
 
 ## Setup
 
+The `youtube-channel-research` skill requires a YouTube Data API v3 key (free):
+
 ```bash
 # Linux/macOS
-export YOUTUBE_API_KEY="tu-api-key"
+export YOUTUBE_API_KEY="your-api-key"
 
 # Windows
-setx YOUTUBE_API_KEY "tu-api-key"
+setx YOUTUBE_API_KEY "your-api-key"
 ```
 
-Obtén una key gratis en [Google Cloud Console](https://console.cloud.google.com/apis/credentials) activando la YouTube Data API v3.
+Get a key at [Google Cloud Console](https://console.cloud.google.com/apis/credentials) enabling the YouTube Data API v3.
 
-## Licencia
+## License
 
 MIT

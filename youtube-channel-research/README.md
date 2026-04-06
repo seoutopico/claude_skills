@@ -76,11 +76,20 @@ Consigue una key gratis en [Google Cloud Console](https://console.cloud.google.c
 
 ## Uso
 
+Escribe el comando seguido del canal que quieras analizar:
+
 ```
 /youtube-channel-research @midudev
-/youtube-channel-research @ThePrimeagen -o primeagen.md
-/youtube-channel-research @AlexHormozi -d mi-vault/research/
 ```
+
+### Opciones avanzadas
+
+| Flag | Que hace | Ejemplo |
+|------|----------|---------|
+| `-o` | Elige el nombre del archivo de salida | `/youtube-channel-research @midudev -o midudev.md` |
+| `-d` | Elige la carpeta donde guardar el resultado | `/youtube-channel-research @midudev -d research/` |
+
+Si no usas flags, el archivo se genera automaticamente en la carpeta `output/`.
 
 ## Ejemplos de output
 

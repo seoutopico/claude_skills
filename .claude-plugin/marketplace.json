@@ -1,0 +1,13 @@
+{
+  "name": "claude-skills",
+  "owner": {
+    "name": "seoutopico"
+  },
+  "plugins": [
+    {
+      "name": "youtube-channel-research",
+      "source": "./youtube-channel-research",
+      "description": "YouTube channel analyzer: top videos, engagement metrics, and content strategy insights"
+    }
+  ]
+}

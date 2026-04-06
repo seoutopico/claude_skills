@@ -12,16 +12,18 @@ Skills para [Claude Code](https://claude.ai/code). Cada skill es un plugin indep
 
 ## Instalacion
 
-Instala cualquier skill como plugin de Claude Code:
+### Via marketplace
 
 ```bash
-claude plugins add /path/to/claude_skills/<skill-name>
+/plugin marketplace add seoutopico/claude_skills
+/plugin install youtube-channel-research@claude-skills
 ```
 
-Por ejemplo:
+### Via local (clonando el repo)
 
 ```bash
-claude plugins add /path/to/claude_skills/youtube-channel-research
+git clone https://github.com/seoutopico/claude_skills
+claude plugins add ./claude_skills/youtube-channel-research
 ```
 
 ## Ejemplos

@@ -22,8 +22,18 @@ Skill para Claude Code que analiza canales de YouTube. Obtiene los 30 videos mas
 
 ## Instalacion
 
+### Via marketplace
+
 ```bash
-claude plugins add /path/to/claude_skills/youtube-channel-research
+/plugin marketplace add seoutopico/claude_skills
+/plugin install youtube-channel-research@claude-skills
+```
+
+### Via local
+
+```bash
+git clone https://github.com/seoutopico/claude_skills
+claude plugins add ./claude_skills/youtube-channel-research
 ```
 
 ## Configuracion

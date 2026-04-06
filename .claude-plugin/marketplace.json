@@ -1,12 +1,15 @@
 {
+  "$schema": "https://anthropic.com/claude-code/marketplace.schema.json",
   "name": "claude-skills",
+  "owner": {
+    "name": "seoutopico"
+  },
   "plugins": [
     {
       "name": "claude-skills",
       "description": "Skills para Claude Code: YouTube channel research y mas.",
       "source": "./",
-      "strict": false,
-      "skills": ["./skills/youtube-channel-research"]
+      "strict": false
     }
   ]
 }

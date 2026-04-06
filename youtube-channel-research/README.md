@@ -14,11 +14,11 @@ A YouTube channel analyzer skill for Claude Code. Fetches the latest 30 videos, 
 
 ### Skill execution (progress checklist + API calls)
 
-![Skill execution](screenshots/skill-execution.png)
+![Skill execution](../examples/youtube-channel-research/skill-execution.png)
 
 ### Output generation
 
-![Skill output](screenshots/skill-output.png)
+![Skill output](../examples/youtube-channel-research/skill-output.png)
 
 ## Installation
 

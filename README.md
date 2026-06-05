@@ -1,48 +1,58 @@
 # Claude Skills
 
-Skills para [Claude Code](https://claude.ai/code). Cada skill es un plugin independiente que puedes instalar por separado.
+Skills para [Claude Code](https://claude.ai/code). Este repo es un **directorio de
+skills**: cada carpeta es una skill independiente, lista para copiar a
+`.claude/skills/` de tu proyecto.
 
-**Creado por [Aina-Lluna Taylor](https://ainalluna.com/)** — Si te interesan herramientas de IA aplicadas a productividad, desarrollo y automatizacion, suscribete a mi newsletter **[ainalluna](https://ainalluna.substack.com/)** donde comparto este tipo de proyectos, tutoriales y reflexiones cada semana.
+**Creado por [Aina-Lluna Taylor](https://ainalluna.com/)** — Si te interesan herramientas de IA aplicadas a productividad, desarrollo y automatización, suscríbete a mi newsletter **[ainalluna](https://ainalluna.substack.com/)** donde comparto este tipo de proyectos, tutoriales y reflexiones cada semana.
 
 ## Skills
 
-| Skill | Que hace |
+| Skill | Qué hace |
 |-------|----------|
-| [youtube-channel-research](./youtube-channel-research/) | Analiza canales de YouTube: top videos, metricas de engagement y analisis de estrategia de contenido |
+| [youtube-channel-research](./youtube-channel-research/) | Analiza canales de YouTube: top vídeos, métricas de engagement y análisis de estrategia de contenido |
+| [browser-console-automation](./browser-console-automation/) | Automatiza tareas en webs con sesión iniciada ejecutando un script en la consola del navegador (vía MCP de Playwright) en lugar de navegar: extrae datos a CSV o ejecuta acciones, minimizando el consumo de tokens |
 
-## Instalacion
+## Instalación
 
-### Opcion 1 — Desde la terminal (recomendado)
+Cada skill es una carpeta. Para instalar una:
 
-Clona el repo e instala el skill que quieras:
+1. Clona el repo (o descarga el [ZIP](https://github.com/seoutopico/claude_skills/archive/refs/heads/master.zip)):
+   ```bash
+   git clone https://github.com/seoutopico/claude_skills
+   ```
+2. Copia la carpeta de la skill que quieras dentro de tu proyecto, en
+   `.claude/skills/` (créala si no existe):
+   ```
+   tu-proyecto/
+   └── .claude/
+       └── skills/
+           └── browser-console-automation/
+               ├── SKILL.md
+               ├── assets/
+               └── references/
+   ```
+3. Cierra y abre Claude Code de nuevo.
+
+## Notas por skill
+
+### browser-console-automation
+Requiere el **MCP de Playwright** (aporta las herramientas `browser_*`). Instálalo
+una vez, con perfil persistente para conservar tus sesiones:
 
 ```bash
-git clone https://github.com/seoutopico/claude_skills
-claude plugins add ./claude_skills/youtube-channel-research
+claude mcp add --scope user playwright -- npx -y @playwright/mcp@latest --user-data-dir "RUTA/A/tu/playwright-profile"
 ```
 
-### Opcion 2 — Descarga manual
+> Windows: `C:\Users\TU_USUARIO\.claude\playwright-profile` ·
+> macOS/Linux: `~/.claude/playwright-profile`
 
-1. Descarga el [ZIP del repo](https://github.com/seoutopico/claude_skills/archive/refs/heads/master.zip)
-2. Descomprime el ZIP
-3. Dentro encontraras una carpeta `youtube-channel-research/skills/youtube-channel-research/` — esa carpeta que contiene el archivo `SKILL.md` es la que necesitas
-4. Copia esa carpeta dentro de tu proyecto en `.claude/skills/` (creala si no existe)
+Detalles de uso, modos (leer / actuar) y técnicas en su `SKILL.md` y
+`references/playwright-mcp.md`.
 
-Tu proyecto deberia quedar asi:
-
-```
-tu-proyecto/
-├── .claude/
-│   └── skills/
-│       └── youtube-channel-research/
-│           └── SKILL.md
-```
-
-5. Cierra y abre Claude Code de nuevo
-
-## Ejemplos
-
-Mira [examples/](./examples/) para ver output real generado por cada skill.
+### youtube-channel-research
+Requiere una API key gratuita de YouTube Data API v3. Ver instrucciones en su
+`SKILL.md`.
 
 ## Licencia
 
@@ -54,6 +64,6 @@ MIT
 
 **Aina-Lluna Taylor** — Desarrollo herramientas de IA para resolver problemas reales.
 
-- [Newsletter ainalluna](https://ainalluna.substack.com/) — IA aplicada, herramientas y automatizacion. Suscribete.
+- [Newsletter ainalluna](https://ainalluna.substack.com/) — IA aplicada, herramientas y automatización. Suscríbete.
 - [Web](https://ainalluna.com/)
 - [LinkedIn](https://www.linkedin.com/in/ainataylor/)
